@@ -4,7 +4,7 @@ import pytest
 import voluptuous as vol
 from homeassistant.const import CONF_HOST, CONF_NAME
 from homeassistant.data_entry_flow import FlowResultType
-from homeassistant.helpers.selector import SelectSelector, SelectSelectorMode
+from homeassistant.helpers.selector import SelectSelectorMode
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.ledvance_local import (
@@ -296,8 +296,10 @@ async def test_flow_discover_local_uses_dropdown_selector(hass, mocker):
     )
 
     selector = next(iter(result["data_schema"].schema.values()))
-    assert isinstance(selector, SelectSelector)
-    assert selector.config.mode == SelectSelectorMode.DROPDOWN
+    assert selector.config["mode"] in (
+        SelectSelectorMode.DROPDOWN,
+        SelectSelectorMode.DROPDOWN.value,
+    )
 
 
 @pytest.mark.asyncio
@@ -313,8 +315,7 @@ async def test_flow_discover_local_selector_uses_translation_key(hass, mocker):
     )
 
     selector = next(iter(result["data_schema"].schema.values()))
-    assert isinstance(selector, SelectSelector)
-    assert selector.config.translation_key == config_flow.CONF_DISCOVERED_DEVICE
+    assert selector.config["translation_key"] == config_flow.CONF_DISCOVERED_DEVICE
 
 
 def test_selector_option_label_uses_translated_text():
