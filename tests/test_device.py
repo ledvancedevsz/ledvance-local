@@ -3,7 +3,7 @@ from time import time
 import pytest
 
 # from homeassistant.const import EVENT_HOMEASSISTANT_STARTED, EVENT_HOMEASSISTANT_STOP
-from custom_components.ledvance_local.device import TuyaLocalDevice
+from custom_components.ledvance.device import TuyaLocalDevice
 
 from .const import EUROM_600_HEATER_PAYLOAD
 
@@ -19,7 +19,7 @@ def mock_api(mocker):
 def patched_hass(hass, mocker):
     hass.is_running = True
     hass.is_stopping = False
-    hass.data = {"ledvance_local": {}}
+    hass.data = {"ledvance": {}}
 
     async def job(func, *args):
         print(f"{args}")
@@ -61,7 +61,7 @@ def test_unique_id(subject, mock_api):
 def test_device_info(subject, mock_api):
     """Returns generic info plus the unique ID for categorisation."""
     assert subject.device_info == {
-        "identifiers": {("ledvance_local", mock_api().id)},
+        "identifiers": {("ledvance", mock_api().id)},
         "name": "Some name",
         "manufacturer": "Ledvance",
     }

@@ -11,12 +11,12 @@
 - Python files should be checked with `ruff check`, `ruff check --select -I`
 - Python files should be formatted consistently with `ruff format`
 - YAML files should be checked with yamllint
-- YAML files should be located in the custom_components/ledvance_local/devices folder
-- Python files implementing the HA integration should be located in custom_components/ledvance_local and its subfolders, with unit tests in tests and its subfolders.
-- JSON files for translations should be located in the custom_components/ledvance_local/translations folder.
-- Icons should be defined in custom_components/ledvance_local/icons.json, and use icons from the material design icons at https://pictogrammers.com/library/mdi/
-- Where possible, new devices should use existing translation_keys which are present in custom_components/ledvance_local/translations/*.json and custom/components/ledvance_local/icons.json
-- if new translation_keys are added, they should be generic, not device specific, and translations should be added to all files in custom_components/ledvance_local/translations and relevant icons to custom_components/ledvance_local/icons.json
+- YAML files should be located in the custom_components/ledvance/devices folder
+- Python files implementing the HA integration should be located in custom_components/ledvance and its subfolders, with unit tests in tests and its subfolders.
+- JSON files for translations should be located in the custom_components/ledvance/translations folder.
+- Icons should be defined in custom_components/ledvance/icons.json, and use icons from the material design icons at https://pictogrammers.com/library/mdi/
+- Where possible, new devices should use existing translation_keys which are present in custom_components/ledvance/translations/*.json and custom/components/ledvance/icons.json
+- if new translation_keys are added, they should be generic, not device specific, and translations should be added to all files in custom_components/ledvance/translations and relevant icons to custom_components/ledvance/icons.json
 
 ## Testing instructions
 
@@ -31,4 +31,4 @@
 
 ## PR instructions
 
-- Always run `ruff check .`, `ruff check --select -I .`, `ruff format --check .` and `yamllint custom_components/ledvance_local/devices` before committing
+- Always run `ruff check .`, `ruff check --select -I .`, `ruff format --check .` and `yamllint custom_components/ledvance/devices` before committing

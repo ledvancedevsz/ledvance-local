@@ -5,13 +5,13 @@ from unittest.mock import AsyncMock, Mock
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-from custom_components.ledvance_local.const import (
+from custom_components.ledvance.const import (
     CONF_DEVICE_ID,
     CONF_PROTOCOL_VERSION,
     CONF_TYPE,
     DOMAIN,
 )
-from custom_components.ledvance_local.datetime import (
+from custom_components.ledvance.datetime import (
     TuyaLocalDateTime,
     async_setup_entry,
 )

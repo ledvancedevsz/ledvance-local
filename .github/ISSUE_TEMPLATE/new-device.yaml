@@ -35,7 +35,7 @@ body:
       label: Product ID
       description: |
         The product ID or productKey for the device.
-        You can get this from the HA log when using cloud assisted setup with Ledvance Local 2024.11.0 and later. Otherwise the same iot.tuya.com API functions that provide the local key or from `tinytuya scan` or other tools doing local discovery. **Do not provide your device id here, that is private info unique to your personal device.**
+        You can get this from the HA log when using cloud assisted setup with LEDVANCE 2024.11.0 and later. Otherwise the same iot.tuya.com API functions that provide the local key or from `tinytuya scan` or other tools doing local discovery. **Do not provide your device id here, that is private info unique to your personal device.**
   - type: input
     id: productname
     attributes:

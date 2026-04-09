@@ -2,7 +2,7 @@
 
 ## Summary
 
-Add a one-time local discovery step to the manual Ledvance Local config flow so the user can pick a discovered Tuya device and have `device_id` and `host` pre-filled before continuing with the existing manual setup form.
+Add a one-time local discovery step to the manual LEDVANCE config flow so the user can pick a discovered Tuya device and have `device_id` and `host` pre-filled before continuing with the existing manual setup form.
 
 The design intentionally reuses `tinytuya` discovery instead of introducing a new background listener or port-level UDP implementation. This keeps the change scoped to config flow UX and avoids touching runtime connection behavior.
 
@@ -99,7 +99,7 @@ Notes:
 
 ## File-Level Changes
 
-### `custom_components/ledvance_local/config_flow.py`
+### `custom_components/ledvance/config_flow.py`
 
 Primary implementation file.
 
@@ -111,7 +111,7 @@ Expected changes:
 - store the selected discovery result on the flow instance for use by `async_step_local()`
 - keep `async_step_local()` mostly unchanged and only extend its default-value handling
 
-### `custom_components/ledvance_local/translations/*.json`
+### `custom_components/ledvance/translations/*.json`
 
 Add a new config step entry for `discover_local`.
 

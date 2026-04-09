@@ -1,4 +1,4 @@
-# Home Assistant Ledvance Local component
+# Home Assistant LEDVANCE component
 
 Please report any [issues](https://github.com/ledvancedevsz/ledvance-local/issues) and feel free to raise [pull requests](https://github.com/ledvancedevsz/ledvance-local/pulls).
 [Many others](https://github.com/ledvancedevsz/ledvance-local/blob/main/ACKNOWLEDGEMENTS.md) have contributed their help already.
@@ -83,7 +83,7 @@ properly over Matter.
 
 A list of currently supported devices can be found in the [DEVICES.md](https://github.com/ledvancedevsz/ledvance-local/blob/main/DEVICES.md) file.
 
-Documentation on building a device configuration file is in [/custom_components/ledvance_local/devices/README.md](https://github.com/ledvancedevsz/ledvance-local/blob/main/custom_components/ledvance_local/devices/README.md)
+Documentation on building a device configuration file is in [/custom_components/ledvance/devices/README.md](https://github.com/ledvancedevsz/ledvance-local/blob/main/custom_components/ledvance/devices/README.md)
 
 If your device is not listed, you can find the information required to add a configuration for it in the following locations:
 
@@ -118,7 +118,7 @@ the integration will be available to install like any other.
 After installing, you can easily configure your devices using the Integrations configuration UI.  Go to Settings / Devices & Services and press the Add Integration button, or click the shortcut button below (requires My Homeassistant configured).
 
 [![Add Integration to your Home Assistant
-instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=ledvance_local)
+instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=ledvance)
 
 ### Choose your configuration path
 
@@ -136,7 +136,7 @@ The Ledvance authentication token expires after a small number of hours and so i
 
 The first stage of configuration is to provide the information needed to connect to the device.
 
-When using the manual config path, Ledvance Local will first scan your local network for compatible devices and let you choose one to pre-fill the device id and IP address. You can still skip this and enter the details manually if discovery does not find your device.
+When using the manual config path, LEDVANCE will first scan your local network for compatible devices and let you choose one to pre-fill the device id and IP address. You can still skip this and enter the details manually if discovery does not find your device.
 
 When using the cloud assisted config, the device id and local key will be pre-filled from the cloud, and the IP address will also be filled if local discovery is not blocked by other integrations or a complex network setup. Otherwise, see [DEVICE_DETAILS.md](DEVICE_DETAILS.md) for instructions on how to find the info.
 
@@ -291,7 +291,7 @@ used when learning. You can also send codes directly without learning first:
 
 If you would like to expose the learnt commands as buttons in the user interface
 you might want to take a look at the [Remote buttons](https://github.com/kongo09/remote_buttons)
-integration, which is compatible with Ledvance Local.
+integration, which is compatible with LEDVANCE.
 
 ## Contributing
 

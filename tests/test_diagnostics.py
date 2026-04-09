@@ -7,18 +7,18 @@ from homeassistant.components.diagnostics import REDACTED
 from homeassistant.const import CONF_HOST
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-from custom_components.ledvance_local.const import (
+from custom_components.ledvance.const import (
     CONF_DEVICE_ID,
     CONF_LOCAL_KEY,
     CONF_PROTOCOL_VERSION,
     CONF_TYPE,
     DOMAIN,
 )
-from custom_components.ledvance_local.diagnostics import (
+from custom_components.ledvance.diagnostics import (
     async_get_config_entry_diagnostics,
     async_get_device_diagnostics,
 )
-from custom_components.ledvance_local.helpers.device_config import TuyaEntityConfig
+from custom_components.ledvance.helpers.device_config import TuyaEntityConfig
 
 
 @pytest.mark.asyncio
